@@ -1,0 +1,10 @@
+import random
+
+names_string = input("Give me everybody's names, seperated by a comma. ")
+names = names_string.split(", ")
+
+count = len(names) - 1
+
+loser = random.randint(0, count)
+
+print(f"{names[loser]} has to pay the bill")
