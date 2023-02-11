@@ -1,0 +1,8 @@
+import random
+
+coin = random.randint(1, 2)
+
+if coin == 1:
+  print("The coin landed on heads!")
+else:
+  print("The coin landed on tails!")
