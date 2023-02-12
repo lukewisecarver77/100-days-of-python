@@ -1,0 +1,72 @@
+import random
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+#Write your code below this line 👇
+
+choice = int(input("Play rock papper scissors! Select rock with 0, paper with 1 and scissors with 2! "))
+
+computer_choice = random.randint(0,2)
+
+if choice == 0:
+  print(rock)
+elif choice == 1:
+  print(paper)
+elif choice == 2:
+  print(scissors)
+else:
+  print("You chose an invalid number! Can you not read or something? Computer wins")
+
+print("You chose ^^^ \nComputer chose vvv")
+
+if computer_choice == 0:
+  print(rock)
+elif computer_choice == 1:
+  print(paper)
+elif computer_choice == 2:
+  print(scissors)
+
+
+if choice == 0 and computer_choice == 0:
+  print("It's a tie!")
+elif choice == 0 and computer_choice == 1:
+  print("Computer wins!")
+elif choice == 0 and computer_choice == 2:
+  print("Player wins!")
+elif choice == 1 and computer_choice == 0:
+  print("Player wins!")
+elif choice == 1 and computer_choice == 1:
+  print("It's a tie!")
+elif choice == 1 and computer_choice == 2:
+  print("Computer wins!")
+elif choice == 2 and computer_choice == 0:
+  print("Computer wins!")
+elif choice == 2 and computer_choice == 1:
+  print("Player wins!")
+elif choice == 2 and computer_choice == 2:
+  print("It's a tie!")
