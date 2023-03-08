@@ -1,0 +1,10 @@
+#functions with outputs
+
+def format_name(f_name, l_name):
+  first = f_name.title()
+  last = l_name.title()
+  name = first + " " + last
+  return name
+
+name = format_name("LUKE", "WISECARVER")
+print(name)
