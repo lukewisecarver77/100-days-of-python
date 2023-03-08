@@ -1,0 +1,36 @@
+from art import logo
+print(logo)
+
+def add(n1, n2):
+  return n1 + n2
+
+def subtract(n1, n2):
+  return n1 - n2
+
+def multiply(n1, n2):
+  return n1 * n2
+
+def divide(n1, n2):
+  return n1 / n2
+
+operations = {
+  "+": add,
+  "-": subtract,
+  "*": multiply,
+  "/": divide,
+}
+
+first_num = int(input("Select the first number. "))
+
+for entry in operations:
+  print(entry)
+
+operator = input("Pick an operation from the line above: ")
+
+second_num = int(input("Select the second number. "))
+
+calc_function = operations[operator]
+answer = calc_function(first_num, second_num)
+
+
+print(f"{first_num} {operator} {second_num} = {answer}")
