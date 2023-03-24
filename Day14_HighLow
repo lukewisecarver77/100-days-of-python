@@ -1,0 +1,57 @@
+import art
+import game_data
+import random
+from replit import clear
+
+print(art.logo)
+def High_low():
+  score = 0
+  a = random.choice(game_data.data)
+  b = random.choice(game_data.data)
+  aFollowers = {a["follower_count"]}
+  bFollowers = {b["follower_count"]}
+  
+  print(f'Compare A: {a["name"]}, a {a["description"]}, from {a["country"]}.')
+  print(art.vs)
+  print(f'Against B: {b["name"]}, a {b["description"]}, from {b["country"]}.')
+
+  choice = input("Who has more followers? Type 'A' or 'B': ").lower()
+  if choice == a:
+    choice = aFollowers
+    print(choice)
+  elif choice == b:
+    choice = bFollowers
+    print(choice)
+
+  def get_random_account():
+    return random.choice(game_data.data)
+  
+  def format_data(account):
+    name = {account["name"]}
+    description = {account["description"]}
+    country = {account["country"]}
+
+    return f"{name}, a {description}, from {country}"
+    
+  def check_answer(guess, aFollowers, bFollowers):
+    if aFollowers > bFollowers:
+      return guess == "a"
+    elif bFollowers > aFollowers:
+      return guess == "b"
+
+  
+  def High_low():
+
+  # if aFollowers > bFollowers and choice == a:
+  #   print("Good Job!")
+  # elif aFollowers < bFollowers and choice == a:
+  #   print("You lose")
+  # elif bFollowers > aFollowers and choice == b:
+  #   print("You Win")
+  # elif bFollowers < aFollowers and choice == b:
+  #   print("bad")
+
+  
+
+
+High_low()
