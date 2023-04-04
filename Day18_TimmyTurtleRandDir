@@ -1,0 +1,17 @@
+from turtle import Turtle, Screen
+import random
+
+tim = Turtle()
+tim.shape("turtle")
+tim.pensize(5)
+tim.speed(10)
+
+
+directions = [0, 90, 180, 270]
+
+for _ in range(100):
+    direction = random.choice(directions)
+    tim.setheading(direction)
+    tim.forward(50)
+
+
