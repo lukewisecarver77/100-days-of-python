@@ -1,0 +1,19 @@
+from turtle import Turtle, Screen
+import random
+
+tim = Turtle()
+tim.shape("turtle")
+
+
+sides = 2
+for _ in range(10):
+    r = random.randint(0, 255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+    tim.color(r, g, b)
+    sides += 1
+    angle = 360 / sides
+    for _ in range(sides):
+        tim.forward(50)
+        tim.right(angle)
+
