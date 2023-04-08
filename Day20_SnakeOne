@@ -1,0 +1,38 @@
+from turtle import Turtle, Screen
+
+screen = Screen()
+screen.setup(width=600, height=600)
+screen.bgcolor("black")
+screen.title("Snake")
+
+
+#seg_1 = Turtle()
+#seg_1.penup()
+#seg_1.shape("square")
+#seg_1.goto(x=0, y=0)
+#seg_1.color("white")
+
+#seg_2 = Turtle()
+#seg_2.penup()
+#seg_2.shape("square")
+#seg_2.goto(x=-20, y=0)
+#seg_2.color("white")
+
+#seg_3 = Turtle()
+#seg_3.penup()
+#seg_3.shape("square")
+#seg_3.goto(x=-40, y=0)
+#seg_3.color("white")
+
+
+xpos = 0
+
+
+for _ in range(3):
+    new_turtle = Turtle()
+    new_turtle.penup()
+    new_turtle.shape("square")
+    new_turtle.goto(x=xpos, y=0)
+    new_turtle.color("white")
+    xpos -= 20
+
