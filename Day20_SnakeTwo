@@ -1,0 +1,55 @@
+from turtle import Turtle, Screen
+import time
+
+
+screen = Screen()
+screen.setup(width=600, height=600)
+screen.bgcolor("black")
+screen.title("Snake")
+screen.tracer(0)
+
+xpos = 0
+
+
+turtles = []
+
+for _ in range(3):
+    new_turtle = Turtle()
+    new_turtle.penup()
+    new_turtle.shape("square")
+    new_turtle.goto(x=xpos, y=0)
+    new_turtle.color("white")
+    xpos -= 20
+    turtles.append(new_turtle)
+
+
+game_on = True
+while game_on:
+    screen.update()
+    time.sleep(0.1)
+
+    for tur_num in range(len(turtles) - 1, 0, -1):
+        new_x = turtles[tur_num - 1].xcor()
+        new_y = turtles[tur_num].ycor()
+        turtles[tur_num].goto(new_x, new_y)
+    turtles[0].forward(20)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+screen.exitonclick()
