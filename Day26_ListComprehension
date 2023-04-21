@@ -1,0 +1,17 @@
+numbers = [1, 2, 3]
+new_numbers = [n + 1 for n in numbers]
+
+
+name = "Angela"
+letters_list = [letter for letter in name]
+
+
+double = [n + n for n in range(1,5)]
+
+
+#new_list = [new_item for item in list if test]
+
+names = ["Alex", "Beth", "Caroline", "Dave", "Elanor", "Freddie"]
+
+short_names = [name.upper() for name in names if len(name) > 4]
+print(short_names)
